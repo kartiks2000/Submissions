@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th><input type="checkbox"/></th>
+        <th>Task</th>
+        <th>Status</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Customer Address</th>
+        <th>Due Date</th>
+    </tr>
+    <tr *ngFor="let tas of tasks;">
+        <td><input type="checkbox"/></td>
+        <td>{{ tas.task }}</td>
+        <td>{{ tas.status }}</td>
+        <td>{{ tas.from }}</td>
+        <td>{{ tas.to }}</td>
+        <td>{{ tas.customerAddress }}</td>
+        <td>{{ tas.dueDate | date:"MMM dd',' hh:mm a"}}</td>
+    </tr>
+</table>
