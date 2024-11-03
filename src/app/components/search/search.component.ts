@@ -291,21 +291,11 @@ export class SearchComponent implements OnInit {
     document.body.removeChild(a);
   }
 
-  mapButton = document.getElementById('mapButton');
-  listButton = document.getElementById('listButton');
   showTable() {
     this.table_map_toogle = false;
-    this.listButton?.classList.add('bg-blue-500', 'text-white');
-    this.listButton?.classList.remove('bg-white', 'text-blue-500');
-    this.mapButton?.classList.add('bg-white', 'text-blue-500');
-    this.mapButton?.classList.remove('bg-blue-500', 'text-white');
   }
 
   showMap() {
     this.table_map_toogle = true;
-    this.mapButton?.classList.add('bg-blue-500', 'text-white');
-    this.mapButton?.classList.remove('bg-white', 'text-blue-500');
-    this.listButton?.classList.add('bg-white', 'text-blue-500');
-    this.listButton?.classList.remove('bg-blue-500', 'text-white');
   }
 }
