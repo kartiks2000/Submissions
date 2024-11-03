@@ -5,11 +5,12 @@ import {Task} from '../../interfaces/task.interface';
 import { CommonModule } from '@angular/common';
 
 import {TableComponent} from '../table/table.component';
+import {MapScreenComponent} from '../map-screen/map-screen.component'
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [CommonModule, TableComponent, ReactiveFormsModule],
+  imports: [CommonModule, TableComponent, ReactiveFormsModule, MapScreenComponent],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
@@ -18,6 +19,8 @@ export class SearchComponent implements OnInit{
   task_data: Task[] = [];
   filteredTasks: Task[] = []
   search_string!: string;
+
+  table_map_toogle: Boolean = false; // false displays the table, true displays the map screen
 
   filterTask = new FormControl('');
   filterStatus = new FormControl('');
@@ -106,6 +109,14 @@ export class SearchComponent implements OnInit{
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
+  }
+
+  showTable(){
+    this.table_map_toogle = false;
+  }
+
+  showMap(){
+    this.table_map_toogle = true;
   }
 
 }

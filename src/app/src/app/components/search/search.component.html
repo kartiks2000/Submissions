@@ -15,4 +15,11 @@
 <button (click)="downloadCSV()">Download</button>
 
 <button (click)="log()">prinitn</button>
-<app-table [tasks]="this.filteredTasks"></app-table>
+
+<button (click)="showTable()">Table</button>
+<button (click)="showMap()">Map</button>
+
+
+<app-table *ngIf="!this.table_map_toogle" [tasks]="this.filteredTasks"></app-table>
+
+<app-map-screen *ngIf="this.table_map_toogle" [tasks]="this.filteredTasks"></app-map-screen>
