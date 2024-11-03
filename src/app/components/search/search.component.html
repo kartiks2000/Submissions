@@ -5,32 +5,31 @@
         class="search-input"
         type="text"
         name="search"
-        placeholder="Search.."
+        placeholder="Search..."
         [formControl]="filterTask"
       />
     </div>
     <div>
       <select
         [formControl]="filterForm"
-        placeholder="Filter by Form"
+        placeholder="Select Form"
         class="form-input"
       >
-        <option value="volvo">Volvo</option>
+        <!-- <option value="volvo">Volvo</option>
         <option value="saab">Saab</option>
         <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+        <option value="audi">Audi</option> -->
       </select>
     </div>
     <div>
       <select
         [formControl]="filterStatus"
-        placeholder="Filter by status (0, 1, 2)"
+        placeholder="Select Status"
         class="form-input"
       >
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+        <option value="0">Low Risk</option>
+        <option value="1">Unassigned</option>
+        <option value="2">Uncomplete</option>
       </select>
     </div>
     <div>

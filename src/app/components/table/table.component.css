@@ -22,3 +22,92 @@
 .table th {
   padding: 15px;
 }
+
+.low_risk_box{
+ width: 117px;
+ height: 32px;
+ border:  solid 1px;
+ border-radius: 4px;
+ padding-top: 4px;
+ padding-left: 16px;
+ padding-bottom: 4px;
+ padding-right: 16px;
+ color: #53D86A;
+ background-color: #D7E5DA;
+ gap: 8px;
+}
+
+.low_risk_circle{
+  width: 12px;
+  height: 12px;
+  border: solid #53D86A;
+  border-radius: 50%;
+}
+
+.low_risk_text{
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+}
+
+.unassigned_box{
+  width: 137px;
+  height: 32px;
+  border:  solid 1px;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-left: 16px;
+  padding-bottom: 4px;
+  padding-right: 16px;
+  color: #ECECED;
+  background-color: #D7E5DA;
+  gap: 8px;
+}
+
+.unassigned_circle{
+  width: 12px;
+  height: 12px;
+  border: solid #ECECED;
+  border-radius: 50%;
+}
+
+.unassigned_text{
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: #B8B9BC;
+}
+
+.uncomplete_box{
+  width: 139px;
+  height: 32px;
+  border:  solid #FF3D00 1px;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-left: 16px;
+  padding-bottom: 4px;
+  padding-right: 16px;
+  color: #FF3D001A;
+  background-color: #FF3D001A;
+  gap: 8px;
+}
+
+.uncomplete_circle{
+  width: 12px;
+  height: 12px;
+  border: solid #FF3D00;
+  border-radius: 50%;
+}
+
+.uncomplete_text{
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: #FF3D00;
+}

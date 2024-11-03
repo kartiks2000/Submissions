@@ -11,7 +11,30 @@
   <tr *ngFor="let tas of tasks">
     <td><input type="checkbox" /></td>
     <td>{{ tas.task }}</td>
-    <td>{{ tas.status }}</td>
+    <!-- <td>{{ tas.status }}</td> -->
+    <td>
+      <ng-container *ngIf="tas.status === 0">
+        <!-- HTML block for status 0 (Low Risk) -->
+        <div class="low_risk_box">
+          <span class="low_risk_circle"></span>
+          <span class="low_risk_text">Low Risk</span>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="tas.status === 1">
+        <!-- HTML block for status 1 (Unassigned) -->
+        <div class="unassigned_box">
+          <span class="unassigned_circle"></span>
+          <span class="unassigned_text">Unassigned</span>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="tas.status === 2">
+        <!-- HTML block for status 2 (Uncomplete) -->
+        <div class="uncomplete_box">
+          <span class="uncomplete_circle"></span>
+          <span class="uncomplete_text">Uncomplete</span>
+        </div>
+      </ng-container>
+    </td>
     <td>{{ tas.from }}</td>
     <td>{{ tas.to }}</td>
     <td>{{ tas.customerAddress }}</td>
