@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import {SubmissionsComponent} from './src/app/components/submissions/submissions.component';
+import {SubmissionsComponent} from './components/submissions/submissions.component';
 
 export const routes: Routes = [
     {

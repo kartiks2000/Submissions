@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import {Task} from '../../interfaces/task.interface';
 
-import {MapListComponent} from '../../components/map-list/map-list.component';
+import {MapListComponent} from '../map-list/map-list.component';
 
 @Component({
   selector: 'app-map-screen',

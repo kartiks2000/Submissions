@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {SearchComponent} from '../search/search.component';
+import {SearchComponent} from '../../components/search/search.component';
 
 import {Task} from '../../interfaces/task.interface';
 
