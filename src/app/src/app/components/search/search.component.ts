@@ -79,4 +79,33 @@ export class SearchComponent implements OnInit{
     });
   }
 
+  downloadCSV() {
+    const csvRows = [];
+    const headers = ['ID', 'Task', 'Status', 'From', 'To', 'Customer Address', 'Due Date'];
+    csvRows.push(headers.join(','));
+
+    this.filteredTasks.forEach(task => {
+      const row = [
+        task.id,
+        task.task,
+        task.status,
+        task.from,
+        task.to,
+        task.customerAddress,
+        task.dueDate.toISOString().split('T')[0],
+      ];
+      csvRows.push(row.join(','));
+    });
+
+    const csvString = csvRows.join('\n');
+    const blob = new Blob([csvString], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.setAttribute('href', url);
+    a.setAttribute('download', 'filtered_tasks.csv');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
 }

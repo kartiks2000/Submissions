@@ -12,6 +12,7 @@
       <input type="date" [formControl]="filterDate">
     </label>
 </div>
+<button (click)="downloadCSV()">Download</button>
 
 <button (click)="log()">prinitn</button>
 <app-table [tasks]="this.filteredTasks"></app-table>
