@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ReactiveFormsModule, FormControl } from '@angular/forms';
 
 import {Task} from '../../interfaces/task.interface';
 import { CommonModule } from '@angular/common';
@@ -8,16 +9,23 @@ import {TableComponent} from '../table/table.component';
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [CommonModule, TableComponent],
+  imports: [CommonModule, TableComponent, ReactiveFormsModule],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
 export class SearchComponent implements OnInit{
 
-  task_date: Task[] = [];
+  task_data: Task[] = [];
+  filteredTasks: Task[] = []
+  search_string!: String;
+
+  filterTask = new FormControl('');
+  filterStatus = new FormControl('');
+  filterDate = new FormControl('');
+  filterForm = new FormControl('');
 
   ngOnInit(): void {
-    this.task_date = [
+    this.task_data = [
       { id: '1', task: 'Task 1 - Review Documents', status: 0, from: '2024-11-08', to: '2024-11-25', customerAddress: '505 Maple St', dueDate: new Date('2024-11-15') },
       { id: '2', task: 'Task 2 - Send Email', status: 0, from: '2024-11-24', to: '2024-11-24', customerAddress: '909 Cherry St', dueDate: new Date('2024-11-14') },
       { id: '3', task: 'Task 3 - Review Documents', status: 1, from: '2024-11-19', to: '2024-11-02', customerAddress: '707 Birch St', dueDate: new Date('2024-11-25') },
@@ -39,6 +47,36 @@ export class SearchComponent implements OnInit{
       { id: '19', task: 'Task 19 - Complete Report', status: 1, from: '2024-11-04', to: '2024-11-09', customerAddress: '1001 Ash St', dueDate: new Date('2024-11-25') },
       { id: '20', task: 'Task 20 - Send Email', status: 0, from: '2024-11-29', to: '2024-11-02', customerAddress: '303 Oak St', dueDate: new Date('2024-11-15') },
     ]
+
+    // Initialize filteredTasks with all tasks initially
+    this.filteredTasks = this.task_data;
+
+    // Listen for changes on each filter and apply filter function
+    this.filterTask.valueChanges.subscribe(() => this.applyFilters());
+    this.filterStatus.valueChanges.subscribe(() => this.applyFilters());
+    this.filterDate.valueChanges.subscribe(() => this.applyFilters());
+  }
+
+  log(): void {
+    console.log(this.filterTask)
+    console.log(this.filterStatus)
+    console.log(this.filterDate)
+  }
+
+  applyFilters() {
+    const filterDateValue = this.filterDate.value ? new Date(this.filterDate.value) : null;
+
+    this.filteredTasks = this.task_data.filter(task => {
+      // Extract the date from the task's dueDate timestamp and normalize it to midnight
+      const taskDueDate = new Date(task.dueDate);
+      taskDueDate.setHours(0, 0, 0, 0); // Set time to 00:00:00 for comparison (Did to resolve the issue of time zone mis match cuz of JS Date)
+
+      const matchesTask = !this.filterTask.value || task.task.toLowerCase().includes(this.filterTask.value.toLowerCase());
+      const matchesStatus = !this.filterStatus.value || task.status === +this.filterStatus.value;
+      const matchesDate = !filterDateValue || taskDueDate.toISOString().split('T')[0] === filterDateValue.toISOString().split('T')[0];
+
+      return matchesTask && matchesStatus && matchesDate;
+    });
   }
 
 }

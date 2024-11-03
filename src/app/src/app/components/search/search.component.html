@@ -1,1 +1,17 @@
-<app-table [tasks]="this.task_date"></app-table>
+<div class="filter-form">
+    <label>Task:
+      <input [formControl]="filterTask" placeholder="Search by task">
+    </label>
+    <label>Form:
+        <input [formControl]="filterForm" placeholder="Filter by Form">
+      </label>
+    <label>Status:
+      <input [formControl]="filterStatus" placeholder="Filter by status (0, 1, 2)">
+    </label>
+    <label>Due Date:
+      <input type="date" [formControl]="filterDate">
+    </label>
+</div>
+
+<button (click)="log()">prinitn</button>
+<app-table [tasks]="this.filteredTasks"></app-table>
