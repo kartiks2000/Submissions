@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 
 import {Task} from '../../interfaces/task.interface';
@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit{
 
   task_data: Task[] = [];
   filteredTasks: Task[] = []
-  search_string!: String;
+  search_string!: string;
 
   filterTask = new FormControl('');
   filterStatus = new FormControl('');
