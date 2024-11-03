@@ -35,7 +35,7 @@ export class SearchComponent implements OnInit {
     this.task_data = [
       {
           id: '1',
-          task: 'Task 1 - Review Documents',
+          task: 'Work Flow 1: Requires Location',
           status: 0,
           from: 'alice@example.com',
           to: 'bob@example.com',
@@ -44,7 +44,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '2',
-          task: 'Task 2 - Send Email',
+          task: 'Work Flow 2: Requires Location',
           status: 0,
           from: 'carol@example.com',
           to: 'dave@example.com',
@@ -53,7 +53,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '3',
-          task: 'Task 3 - Review Documents',
+          task: 'Work Flow 3: Requires Location',
           status: 1,
           from: 'eve@example.com',
           to: 'frank@example.com',
@@ -62,7 +62,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '4',
-          task: 'Task 4 - Review Documents',
+          task: 'Work Flow 4: Requires Location',
           status: 0,
           from: 'grace@example.com',
           to: 'hank@example.com',
@@ -71,7 +71,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '5',
-          task: 'Task 5 - Update Project',
+          task: 'Work Flow 5: Requires Location',
           status: 1,
           from: 'irene@example.com',
           to: 'jack@example.com',
@@ -80,7 +80,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '6',
-          task: 'Task 6 - Update Project',
+          task: 'Work Flow 6: Requires Location',
           status: 2,
           from: 'kate@example.com',
           to: 'leo@example.com',
@@ -89,7 +89,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '7',
-          task: 'Task 7 - Update Project',
+          task: 'Work Flow 7: Requires Location',
           status: 2,
           from: 'mike@example.com',
           to: 'nina@example.com',
@@ -98,7 +98,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '8',
-          task: 'Task 8 - Attend Meeting',
+          task: 'Work Flow 8: Requires Location',
           status: 1,
           from: 'oliver@example.com',
           to: 'peter@example.com',
@@ -107,7 +107,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '9',
-          task: 'Task 9 - Attend Meeting',
+          task: 'Work Flow 9: Requires Location',
           status: 1,
           from: 'quincy@example.com',
           to: 'rachel@example.com',
@@ -116,7 +116,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '10',
-          task: 'Task 10 - Send Email',
+          task: 'Work Flow 10: Requires Location',
           status: 0,
           from: 'sarah@example.com',
           to: 'tom@example.com',
@@ -125,7 +125,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '11',
-          task: 'Task 11 - Send Email',
+          task: 'Work Flow 11: Requires Location',
           status: 0,
           from: 'ursula@example.com',
           to: 'victor@example.com',
@@ -134,7 +134,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '12',
-          task: 'Task 12 - Attend Meeting',
+          task: 'Work Flow 12: Requires Location',
           status: 2,
           from: 'wendy@example.com',
           to: 'xander@example.com',
@@ -143,7 +143,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '13',
-          task: 'Task 13 - Complete Report',
+          task: 'Work Flow 13: Requires Location',
           status: 0,
           from: 'yara@example.com',
           to: 'zane@example.com',
@@ -152,7 +152,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '14',
-          task: 'Task 14 - Update Project',
+          task: 'Work Flow 14: Requires Location',
           status: 0,
           from: 'amy@example.com',
           to: 'brian@example.com',
@@ -161,7 +161,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '15',
-          task: 'Task 15 - Complete Report',
+          task: 'Work Flow 15: Requires Location',
           status: 1,
           from: 'chris@example.com',
           to: 'diana@example.com',
@@ -170,7 +170,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '16',
-          task: 'Task 16 - Send Email',
+          task: 'Work Flow 16: Requires Location',
           status: 0,
           from: 'ethan@example.com',
           to: 'fiona@example.com',
@@ -179,7 +179,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '17',
-          task: 'Task 17 - Attend Meeting',
+          task: 'Work Flow 17: Requires Location',
           status: 0,
           from: 'george@example.com',
           to: 'harry@example.com',
@@ -188,7 +188,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '18',
-          task: 'Task 18 - Review Documents',
+          task: 'Work Flow 18: Requires Location',
           status: 1,
           from: 'isabel@example.com',
           to: 'jake@example.com',
@@ -197,7 +197,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '19',
-          task: 'Task 19 - Complete Report',
+          task: 'Work Flow 19: Requires Location',
           status: 1,
           from: 'karen@example.com',
           to: 'liam@example.com',
@@ -206,7 +206,7 @@ export class SearchComponent implements OnInit {
       },
       {
           id: '20',
-          task: 'Task 20 - Send Email',
+          task: 'Work Flow 20: Requires Location',
           status: 0,
           from: 'mia@example.com',
           to: 'noah@example.com',
