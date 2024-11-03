@@ -24,7 +24,7 @@ export class SearchComponent implements OnInit {
   filteredTasks: Task[] = [];
   search_string!: string;
 
-  table_map_toogle: Boolean = false; // false displays the table, true displays the map screen
+  table_map_toogle = false; // false displays the table, true displays the map screen
 
   filterTask = new FormControl('');
   filterStatus = new FormControl('');
