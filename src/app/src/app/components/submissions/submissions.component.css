@@ -1,0 +1,9 @@
+.main-heading {
+  margin: 30px;
+}
+.main-heading h2 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 30px;
+}

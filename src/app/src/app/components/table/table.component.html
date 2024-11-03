@@ -1,20 +1,29 @@
-<table>
-    <tr>
-        <th><input type="checkbox"/></th>
-        <th>Task</th>
-        <th>Status</th>
-        <th>From</th>
-        <th>To</th>
-        <th>Customer Address</th>
-        <th>Due Date</th>
-    </tr>
-    <tr *ngFor="let tas of tasks;">
-        <td><input type="checkbox"/></td>
-        <td>{{ tas.task }}</td>
-        <td>{{ tas.status }}</td>
-        <td>{{ tas.from }}</td>
-        <td>{{ tas.to }}</td>
-        <td>{{ tas.customerAddress }}</td>
-        <td>{{ tas.dueDate | date:"MMM dd',' hh:mm a"}}</td>
-    </tr>
+<table class="table">
+  <tr>
+    <th><input type="checkbox" /></th>
+    <th>Task</th>
+    <th>Status</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Customer Address</th>
+    <th>Due Date</th>
+  </tr>
+  <tr *ngFor="let tas of tasks">
+    <td><input type="checkbox" /></td>
+    <td>{{ tas.task }}</td>
+    <td>{{ tas.status }}</td>
+    <td>{{ tas.from }}</td>
+    <td>{{ tas.to }}</td>
+    <td>{{ tas.customerAddress }}</td>
+    <td>{{ tas.dueDate | date : "MMM dd',' hh:mm a" }}</td>
+  </tr>
 </table>
+
+<!-- <pagination-controls (pageChange)="page = $event"></pagination-controls> -->
+
+<!-- <table mat-table [dataSource]="myDataArray">
+  <ng-container matColumnDef="score">
+    <th mat-header-cell *matHeaderCellDef> Score </th>
+    <td mat-cell *matCellDef="let user"> {{user.score}} </td>
+  </ng-container>
+</table> -->
