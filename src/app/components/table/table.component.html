@@ -8,27 +8,23 @@
     <th>Customer Address</th>
     <th>Due Date</th>
   </tr>
-  <tr *ngFor="let tas of tasks">
+  <tr *ngFor="let tas of paginatedTasks">
     <td><input type="checkbox" /></td>
     <td>{{ tas.task }}</td>
-    <!-- <td>{{ tas.status }}</td> -->
     <td>
       <ng-container *ngIf="tas.status === 0">
-        <!-- HTML block for status 0 (Low Risk) -->
         <div class="low_risk_box">
           <span class="low_risk_circle"></span>
           <span class="low_risk_text">Low Risk</span>
         </div>
       </ng-container>
       <ng-container *ngIf="tas.status === 1">
-        <!-- HTML block for status 1 (Unassigned) -->
         <div class="unassigned_box">
           <span class="unassigned_circle"></span>
           <span class="unassigned_text">Unassigned</span>
         </div>
       </ng-container>
       <ng-container *ngIf="tas.status === 2">
-        <!-- HTML block for status 2 (Uncomplete) -->
         <div class="uncomplete_box">
           <span class="uncomplete_circle"></span>
           <span class="uncomplete_text">Uncomplete</span>
@@ -42,29 +38,11 @@
   </tr>
 </table>
 
-<!-- <pagination-controls (pageChange)="page = $event"></pagination-controls> -->
-
-<!-- <table mat-table [dataSource]="myDataArray">
-  <ng-container matColumnDef="score">
-    <th mat-header-cell *matHeaderCellDef> Score </th>
-    <td mat-cell *matCellDef="let user"> {{user.score}} </td>
-  </ng-container>
-</table> -->
-
-<ul class="pagination">
-  <li class="page-item">
-    <a class="page-link" href="#" aria-label="Previous">
-      <span aria-hidden="true">&laquo;</span>
-      <span class="sr-only">Previous</span>
-    </a>
-  </li>
-  <li class="page-item"><a class="page-link" href="#">1</a></li>
-  <li class="page-item"><a class="page-link" href="#">2</a></li>
-  <li class="page-item"><a class="page-link" href="#">3</a></li>
-  <li class="page-item">
-    <a class="page-link" href="#" aria-label="Next">
-      <span aria-hidden="true">&raquo;</span>
-      <span class="sr-only">Next</span>
-    </a>
-  </li>
-</ul>
+<ngb-pagination
+  [collectionSize]="tasks.length"
+  [(page)]="page"
+  [pageSize]="pageSize"
+  [maxSize]="5"
+  [boundaryLinks]="true"
+  (pageChange)="onPageChange()">
+</ngb-pagination>
