@@ -52,8 +52,8 @@ body {
   gap: 8px;
 }
 
-.active{
-  background-color: #1773BB;
+.icon-text:active {
+  background-color: #1773bb;
 }
 
 /* Logout and bell icon */
@@ -81,4 +81,13 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+svg {
+  margin-right: 10px;
+}
+
+.submission {
+  background-color: #1773bb;
+  padding: 0px 5px;
 }

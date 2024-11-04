@@ -23,28 +23,32 @@
   padding: 15px;
 }
 
-.low_risk_box{
- width: 117px;
- height: 32px;
- border:  solid 1px;
- border-radius: 4px;
- padding-top: 4px;
- padding-left: 16px;
- padding-bottom: 4px;
- padding-right: 16px;
- color: #53D86A;
- background-color: #D7E5DA;
- gap: 8px;
+.low_risk_box {
+  width: 117px;
+  height: 32px;
+  border: solid 1px;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-left: 16px;
+  padding-bottom: 4px;
+  padding-right: 16px;
+  color: #53d86a;
+  background-color: #d7e5da;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
-.low_risk_circle{
+.low_risk_circle {
   width: 12px;
   height: 12px;
-  border: solid #53D86A;
-  border-radius: 50%;
+  border: solid #53d86a;
+  border-radius: 100%;
+  display: flex;
+  background-color: #53d86a;
 }
 
-.low_risk_text{
+.low_risk_text {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -52,62 +56,75 @@
   text-align: center;
 }
 
-.unassigned_box{
+.unassigned_box {
   width: 137px;
   height: 32px;
-  border:  solid 1px;
+  border: solid 1px #B8B9BC;
   border-radius: 4px;
   padding-top: 4px;
   padding-left: 16px;
   padding-bottom: 4px;
   padding-right: 16px;
-  color: #ECECED;
-  background-color: #D7E5DA;
-  gap: 8px;
+  color: #ececed;
+  background-color: #d7e5da;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
-.unassigned_circle{
+.unassigned_circle {
   width: 12px;
   height: 12px;
-  border: solid #ECECED;
-  border-radius: 50%;
+  border: solid #b8b9bc;
+  border-radius: 100%;
+  display: flex;
+  background-color: #b8b9bc;
 }
 
-.unassigned_text{
+.unassigned_text {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   text-align: center;
-  color: #B8B9BC;
+  color: #b8b9bc;
 }
 
-.uncomplete_box{
+.uncomplete_box {
   width: 139px;
   height: 32px;
-  border:  solid #FF3D00 1px;
+  border: solid #ff3d00 1px;
   border-radius: 4px;
   padding-top: 4px;
   padding-left: 16px;
   padding-bottom: 4px;
   padding-right: 16px;
-  color: #FF3D001A;
-  background-color: #FF3D001A;
-  gap: 8px;
+  color: #ff3d001a;
+  background-color: #ff3d001a;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
-.uncomplete_circle{
+.uncomplete_circle {
   width: 12px;
   height: 12px;
-  border: solid #FF3D00;
-  border-radius: 50%;
+  border: solid #ff3d00;
+  border-radius: 100%;
+  display: flex;
+  background-color: #ff3d00;
 }
 
-.uncomplete_text{
+.uncomplete_text {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   text-align: center;
-  color: #FF3D00;
+  color: #ff3d00;
+}
+.pagination {
+  display: flex;
+  gap: 10px;
+  float: right;
 }

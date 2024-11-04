@@ -1,10 +1,20 @@
-<div *ngFor="let tas of tasks">
+<div class="map-content">
+  <div *ngFor="let tas of tasks">
     <div class="list-main">
-      <div>
+      <div class="content">
         <h5 class="heading">{{ tas.task }}</h5>
-        <span class="label_text">From: </span><p class="value_text">{{ tas.from }}</p><br>
-        <span class="label_text">To: </span><p class="value_text">{{ tas.to }}</p><br>
-        <span class="label_text">Due Date: </span><p class="value_text due_date">{{ tas.dueDate | date : "MMM dd"  }}</p><br>
+        <div class="sub-info">
+          <span class="label_text">From: </span>
+          <p class="value_text">{{ tas.from }}</p>
+        </div>
+        <div class="sub-info">
+          <span class="label_text">To: </span>
+          <p class="value_text">{{ tas.to }}</p>
+        </div>
+        <div class="sub-info">
+          <span class="label_text">Due Date: </span>
+          <p class="value_text due_date">{{ tas.dueDate | date : "MMM dd" }}</p>
+        </div>
       </div>
       <div>
         <ng-container *ngIf="tas.status === 0">
@@ -27,6 +37,8 @@
             <span class="uncomplete_circle"></span>
             <span class="uncomplete_text">Uncomplete</span>
           </div>
-      </ng-container>
+        </ng-container>
+      </div>
     </div>
+  </div>
 </div>
