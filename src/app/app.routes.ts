@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import {SubmissionsComponent} from './components/submissions/submissions.component';
+import { SubmissionsComponent } from './components/submissions/submissions.component';
 
 export const routes: Routes = [
     {
@@ -8,11 +8,11 @@ export const routes: Routes = [
     },
     {
         path: 'forms',
-        redirectTo: 'www.google.com'
+        component: SubmissionsComponent
     },
     {
-        path: 'Customers',
-        redirectTo: 'www.google.com'
+        path: 'customers',
+        component: SubmissionsComponent
     },
     {
         path: 'submissions',
@@ -20,14 +20,14 @@ export const routes: Routes = [
     },
     {
         path: 'history',
-        redirectTo: 'www.google.com'
+        component: SubmissionsComponent
     },
     {
         path: 'reports',
-        redirectTo: 'www.google.com'
+        component: SubmissionsComponent
     },
     {
         path: 'workflows',
-        redirectTo: 'www.google.com'
+        component: SubmissionsComponent
     },
 ];

@@ -52,6 +52,10 @@ body {
   gap: 8px;
 }
 
+.active{
+  background-color: #1773BB;
+}
+
 /* Logout and bell icon */
 
 .nav_icons {
