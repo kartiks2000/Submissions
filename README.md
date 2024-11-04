@@ -72,6 +72,26 @@ ng serve
 
 The application will be available at `http://localhost:4200`.
 
+## Google Maps Functionality
+
+To enable map functionality in the application, an API key for the Google Maps service is required. 
+
+### Setting Up the API Key
+
+1. Obtain a Google Maps API key from the [Google Cloud Console](https://console.cloud.google.com/).
+2. Open the `index.html` file in the root of your project.
+3. Locate the script tag for Google Maps and replace `YOUR_API_KEY` in the `src` property with your actual API key:
+
+   ```html
+   <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"
+    ></script>
+   ```
+
+Make sure to keep your API key secure and restrict its usage to your application for security purposes.
+
 ## Features
 
 - **Filter Functionality**: Users can filter data based on various criteria, including date, status, and text input. This allows for more precise data retrieval and enhances user experience.
