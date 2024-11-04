@@ -17,7 +17,7 @@ export class MapComponent implements OnInit {
   initMap(): void {
     // Initialize map with a center location and zoom level
     const map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
-      center: { lat: 37.7749, lng: -122.4194 }, // Example: San Francisco
+      center: { lat: 37.7749, lng: -122.4194 },
       zoom: 10
     });
 
