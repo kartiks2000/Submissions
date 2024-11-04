@@ -11,6 +11,12 @@ To clone this repository, use the following command:
 git clone https://github.com/kartiks2000/Submissions.git
 ```
 
+Go inside the working directory:
+
+```bash
+cd Submissions
+```
+
 ## Prerequisites
 
 Make sure you have the following installed on your machine:
@@ -74,7 +80,7 @@ The application will be available at `http://localhost:4200`.
 
 ## Google Maps Functionality
 
-To enable map functionality in the application, an API key for the Google Maps service is required. 
+To enable map functionality in the application, an API key for the Google Maps service is required.
 
 ### Setting Up the API Key
 
