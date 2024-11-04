@@ -13,7 +13,7 @@
       <select
         [formControl]="filterForm"
         placeholder="Select Form"
-        class="form-input"
+        class="form-input custom-select"
       >
       <option value="" disabled selected>Select Form</option>
         <!-- <option value="volvo">Volvo</option>
@@ -26,7 +26,7 @@
       <select
         [formControl]="filterStatus"
         placeholder="Select Status"
-        class="form-input"
+        class="form-input custom-select"
       >
         <option value="" disabled selected>Select Status</option>
         <option value="0">Low Risk</option>
@@ -35,7 +35,7 @@
       </select>
     </div>
     <div>
-      <input type="date" [formControl]="filterDate" class="date-input" />
+      <input type="date" [formControl]="filterDate" class="date-input" onclick="this.showPicker()"/>
 
       <!-- <input
         type="text"
