@@ -128,3 +128,30 @@
   gap: 10px;
   float: right;
 }
+
+
+/* Paginater styling */
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between; /* Space between the elements */
+  align-items: center; /* Center vertically */
+  margin-top: 1rem; /* Optional: add some space above */
+  padding-bottom: 10px;
+}
+
+.pagination-info {
+  flex: 1; /* Take up remaining space */
+  text-align: left; /* Align text to the left */
+}
+
+.pagination-numbers {
+  /* You can add styles specific to the pagination here if needed */
+}
+
+.pagination {
+  display: flex; /* Ensure the pagination is displayed as a flex container */
+}
+
+
+

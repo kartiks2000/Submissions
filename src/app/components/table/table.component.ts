@@ -34,4 +34,8 @@ export class TableComponent implements OnInit, OnChanges {
     const startIndex = (this.page - 1) * this.pageSize;
     this.paginatedTasks = this.tasks.slice(startIndex, startIndex + this.pageSize);
   }
+
+  getMaxItems(): number {
+    return Math.min(this.page * this.pageSize, this.tasks.length);
+  }
 }
