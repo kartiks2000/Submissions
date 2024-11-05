@@ -143,6 +143,12 @@ Make sure to keep your API key secure and restrict its usage to your application
 ![Screenshot 3](/repo_assets/ss_3.png)
 ![Screenshot 4](/repo_assets/ss_4.png)
 
+## Export Data
+
+The `Export` button downloads the filtered data as a CSV file.
+
+![Exported CSV](/repo_assets/ss_5.png)
+
 ## Linting
 
 To check for linting errors, use the following command:
