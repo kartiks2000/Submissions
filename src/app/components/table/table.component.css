@@ -143,3 +143,9 @@
 .pagination {
   display: flex;
 }
+
+.active {
+  background-color: white !important;
+  border: 1px solid #2188d9 !important;
+  color: #2188d9 !important;
+}

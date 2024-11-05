@@ -19,7 +19,7 @@ export class MapComponent implements OnInit {
       document.getElementById('map') as HTMLElement,
       {
         center: { lat: 37.7749, lng: -122.4194 },
-        zoom: 10,
+        zoom: 12,
       }
     );
 
