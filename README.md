@@ -17,6 +17,13 @@ Go inside the working directory:
 cd Submissions
 ```
 
+## Important Note
+
+The application can be deployed as a Dockerized container using the provided Dockerfile. This approach simplifies the deployment process, ensuring a consistent environment across different platforms.
+
+For detailed instructions on how to build and run the Docker container, please refer to the end sections of this README.
+
+
 ## Prerequisites
 
 Make sure you have the following installed on your machine:
@@ -157,3 +164,35 @@ ng build
 ![Build Screenshot](/repo_assets/ss_7.png)
 
 This will generate the build artifacts in the `dist/` directory.
+
+
+
+## Running the Application with Docker
+
+To run the application using Docker, follow these steps:
+
+1. **Build the Docker Image**: 
+
+   Use the following command to build the Docker image. Replace `<image-name>` with your preferred name for the image (e.g., `submissions-app`):
+
+   ```bash
+   docker build -t <image-name> .
+   ```
+
+2. **Run the Docker Container**: 
+
+   After building the image, run the container using the command below. Make sure to map port `5001` of your host to port `5001` of the container:
+
+   ```bash
+   docker run -p 5001:5001 <image-name>
+   ```
+
+### Caution
+
+Before running the Docker container, ensure that port `5001` is not already in use by another application. You can check the current usage of the port with the following command:
+
+```bash
+lsof -i :5001
+```
+
+If you find that port `5001` is in use, consider either stopping the application using that port or modifying the port mapping in the `docker run` command (e.g., `-p 5005:5001` to run on port `5005` instead).
