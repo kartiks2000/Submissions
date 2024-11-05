@@ -161,6 +161,12 @@ To create a production build of the application, run:
 ng build
 ```
 
+Or
+
+```bash
+ng build --configuration production
+```
+
 ![Build Screenshot](/repo_assets/ss_7.png)
 
 This will generate the build artifacts in the `dist/` directory.
