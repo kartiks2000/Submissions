@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {SearchComponent} from '../../components/search/search.component';
+import { SearchComponent } from '../../components/search/search.component';
 
-import {Task} from '../../interfaces/task.interface';
+import { Task } from '../../interfaces/task.interface';
 
 @Component({
   selector: 'app-submissions',
@@ -12,7 +12,7 @@ import {Task} from '../../interfaces/task.interface';
   templateUrl: './submissions.component.html',
   styleUrl: './submissions.component.css'
 })
-export class SubmissionsComponent{
+export class SubmissionsComponent {
 
   task_date: Task[] = [];
 

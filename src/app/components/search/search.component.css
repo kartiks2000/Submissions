@@ -46,32 +46,21 @@
 }
 
 .date-input {
-  appearance: none;           /* Standard */
-  -webkit-appearance: none;    /* Chrome & Safari */
+  appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: textfield;
 
   width: 210px;
   height: 50px;
-  padding: 13px 16px 13px 40px; /* Adjust left padding for icon */
+  padding: 13px 16px 13px 40px;
   gap: 8px;
   border-radius: 4px;
   border: 1px solid #b8b9bc;
-  background-image: url("../../../assets/icons/date_icon.svg"); /* Path to the date icon */
+  background-image: url("../../../assets/icons/date_icon.svg"); /* Putting date picker icon as background */
   background-repeat: no-repeat;
-  background-position: 10px center; /* Positions icon on the left */
-  background-size: 24px 24px; /* Sets icon size to 24px */
+  background-position: 10px center;
+  background-size: 24px 24px;
 }
-
-/* .search_input {
-  width: 334px;
-  height: 48px;
-  border-radius: 4px;
-  border: 1px solid #b8b9bc;
-  padding-top: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-bottom: 3px;
-} */
 
 .export-icon {
   background-image: url("../../../assets/icons/export_icon.svg");
@@ -80,23 +69,19 @@
   padding-left: 25px;
 }
 
-
 .custom-select {
   appearance: none; /* Removes default arrow */
-  -webkit-appearance: none; /* For Safari */
-  -moz-appearance: none; /* For Firefox */
-  padding-right: 30px; /* Adds space for the custom icon */
-  background-image: url("../../../assets/icons/dropdown_arrow_icon.svg"); /* Path to your custom icon */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 30px;
+  background-image: url("../../../assets/icons/dropdown_arrow_icon.svg"); /* Putting arrow icon as background */
   background-repeat: no-repeat;
-  background-position: right 10px center; /* Position the icon */
-  background-size: 24px 24px; /* Adjust the size of the icon */
+  background-position: right 10px center;
+  background-size: 24px 24px;
 }
 
-
+/* Removes the default calender logo fro the date input */
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
   pointer-events: none;
 }
-
-
-

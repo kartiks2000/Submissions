@@ -452,11 +452,12 @@ export class SearchComponent implements OnInit {
     this.filterDate.valueChanges.subscribe(() => this.applyFilters());
   }
 
-  log(): void {
-    console.log(this.filterTask);
-    console.log(this.filterStatus);
-    console.log(this.filterDate);
-  }
+  // For testing purposes
+  // log(): void {
+  //   console.log(this.filterTask);
+  //   console.log(this.filterStatus);
+  //   console.log(this.filterDate);
+  // }
 
   applyFilters() {
     const filterDateValue = this.filterDate.value
@@ -476,7 +477,7 @@ export class SearchComponent implements OnInit {
       const matchesDate =
         !filterDateValue ||
         taskDueDate.toISOString().split('T')[0] ===
-          filterDateValue.toISOString().split('T')[0];
+        filterDateValue.toISOString().split('T')[0];
 
       return matchesTask && matchesStatus && matchesDate;
     });

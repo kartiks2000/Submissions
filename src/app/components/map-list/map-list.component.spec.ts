@@ -10,7 +10,7 @@ describe('MapListComponent', () => {
     await TestBed.configureTestingModule({
       imports: [MapListComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(MapListComponent);
     component = fixture.componentInstance;

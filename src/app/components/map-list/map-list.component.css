@@ -54,7 +54,6 @@
   top: 49px;
   left: 16px;
   gap: 0px;
-  /* opacity: 0px; */
 }
 
 .due_date {
@@ -107,7 +106,7 @@
 .unassigned_box {
   width: 137px;
   height: 32px;
-  border: solid 1px #B8B9BC;
+  border: solid 1px #b8b9bc;
   border-radius: 4px;
   padding-top: 4px;
   padding-left: 16px;

@@ -8,7 +8,7 @@ export const routes: Routes = [
     },
     {
         path: 'forms',
-        component: SubmissionsComponent
+        component: SubmissionsComponent // Assigning `SubmissionsComponent` for now
     },
     {
         path: 'customers',

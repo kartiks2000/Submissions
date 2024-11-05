@@ -43,17 +43,7 @@
     {{ (page - 1) * pageSize + 1 }}-{{ getMaxItems() }} of {{ tasks.length }} submissions
   </div>
 
-  <ngb-pagination
-    class="pagination-numbers"
-    [collectionSize]="tasks.length"
-    [(page)]="page"
-    [pageSize]="pageSize"
-    [maxSize]="5"
-    [boundaryLinks]="true"
-    (pageChange)="onPageChange()">
+  <ngb-pagination class="pagination-numbers" [collectionSize]="tasks.length" [(page)]="page" [pageSize]="pageSize"
+    [maxSize]="5" [boundaryLinks]="true" (pageChange)="onPageChange()">
   </ngb-pagination>
 </div>
-
-
-
-
